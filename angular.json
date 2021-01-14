@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Nethys"
+  "defaultProject": "Nethys",
+  "cli": {
+    "analytics": "d4a6f00e-ccbc-40be-a65d-6381033b512e"
+  }
 }
