@@ -1,18 +1,17 @@
-import { Class } from "../class.model";
-import { EquipmentSet } from "./equipmentSet.model";
-import { Feats } from "./feats.model";
-import { Skills } from "./skills.model";
-import { Spells } from "./spells.model";
-import { Status } from "./status.model";
+import { Class } from '../class.model';
+import { EquipmentSet } from './equipmentSet.model';
+import { Feats } from './feats.model';
+import { Skills } from './skills.model';
+import { Status } from './status.model';
 
 /**
- * All optional fields and class will not be optional upon releasem,
- * except for the descriptors at the bottem which have no 
+ * All optional fields and class will not be optional upon release,
+ * except for the descriptors at the bottom which have no
  * statistical gameplay implications.
  */
 export interface Character {
-    
-    id: number; 
+
+    id: number;
     username: string;
     name: string;
     level: number;
@@ -24,10 +23,9 @@ export interface Character {
     initiative?: number;
 
     equipmentSet?: EquipmentSet;
-    status?: Status; 
+    status?: Status;
     skills?: Skills;
     feats?: Feats;
-    spells: Spells; 
     class: Class;
 
     armorClass?: {
@@ -36,34 +34,34 @@ export interface Character {
         flatFooted: number;
         cmd: number;
         cmb: number;
-    }
+    };
 
     speed?: {
         land: number;
         fly: number;
-    }
+    };
 
     hitPoints?: {
         hitDie: number;
         current: number;
         max: number;
         temporary: number;
-    }
+    };
 
     abilityScores: {
-        str: number;
-        dex: number;
-        con: number;
-        int: number;
-        wis: number;
-        cha: number;
-    }
+        strength: number;
+        dexterity: number;
+        constitution: number;
+        intellect: number;
+        wisdom: number;
+        charisma: number;
+    };
 
     saves?: {
         reflex: number;
         fortitude: number;
         will: number;
-    }
+    };
 
     // Descriptors
     gender?: string;
